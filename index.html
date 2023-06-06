@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Budget App</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="app">
-      <div class="container">
-        <div class="table">
-          <div>
-            <p>Total Budget</p>
-            <span id="totalBudget">0</span>
-          </div>
-          <div>
-            <p>Expenses</p>
-            <span id="Expenses">0</span>
-          </div>
-          <div>
-            <p>Remaining</p>
-            <span id="Remaining">0</span>
-          </div>
-        </div>
-        <div class="budgetContainer">
-          
-          <div class="Budget">
-            <h3>Budget</h3>
-            <p class="hide error" id="budget-error">
-              Please enter valid value
-            </p>
-            <input type="number" id="total-amount" placeholder ="Enter Total Amount" />
-            <button class="submit" id="total-amount-button" onclick="ProductTitle()">Set Budget</button>
-          </div>
 
-          <div class="Expenses">
-            <h3>Expenses</h3>
-            <p class="hide error " id="product-title-error">
-              Please enter valid value
-            </p>
-            <input
-              type="text" class="product-title" id="product-title" placeholder="Name of Product"/>
-            <input type="number"id="user-amount"placeholder="Cost of Prodect"/>
-            <button class="submit" id="check-amount" onclick="amountChecker()">Check Amount</button>
-          </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <div class="container">
+      <div class="table">
+        <div>
+          <p>Total Budget</p>
+          <span id="totalBudget">0</span>
         </div>
-       
+        <div>
+          <p>Expenses</p>
+          <span id="Expenses">0</span>
+        </div>
+        <div>
+          <p>Remaining</p>
+          <span id="Remaining">0</span>
+        </div>
       </div>
-      <div class="list">
-        <h3>Expense List</h3>
-        <div class="list-container" id="list"></div>
+      <div class="budgetContainer">
+
+        <div class="Budget">
+          <h3>Budget</h3>
+          <p class="hide error" id="budgetError">
+            Please enter valid value
+          </p>
+          <input type="number" id="totalAmount" placeholder="Enter Total Amount" />
+          <button class="submit" id="totalButton" onclick="ProductTitle()">Set Budget</button>
+        </div>
+
+        <div class="Expenses">
+          <h3>Expenses</h3>
+          <p class="hide error " id="productError">
+            Please enter valid value
+          </p>
+          <input type="text" class="product-title" id="productTitle" placeholder="Name of Product" />
+          <input type="number" id="userAmount" placeholder="Cost of Prodect" />
+          <p class="hide error " id="costError">
+            Please enter valid value
+          </p>
+          <button class="submit" id="userAmount" onclick="amountChecker()">Check Amount</button>
+        </div>
       </div>
+
     </div>
-    <script src="app.js"></script>
-  </body>
+    <div class="list">
+      <h3>Expense List</h3>
+      <div class="list-container" id="list"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
 </html>
