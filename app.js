@@ -1,23 +1,23 @@
-let totalAmount = document.getElementById("total-amount");
-let userAmount = document.getElementById("user-amount");
-let checkAmountButton = document.getElementById("check-amount");
-let totalAmountButton = document.getElementById("total-amount-button");
-let productTitle = document.getElementById("product-title");
-let errorMessage = document.getElementById("budget-error");
-let productTitleError = document.getElementById("product-title-error");
-let productCostError = document.getElementById("product-cost-error");
+let totalAmount = document.getElementById("totalAmount");
+let userAmount = document.getElementById("userAmount");
+let checkAmountButton = document.getElementById("checkAmount");
+let totalButton = document.getElementById("totalButton");
+let productTitle = document.getElementById("productTitle");
+let budgetError = document.getElementById("budgetError");
+let productError = document.getElementById("productError");
+let costError = document.getElementById("costError");
 let totalBudget = document.getElementById("totalBudget");
 let Expenses = document.getElementById("Expenses");
 let Remaining = document.getElementById("Remaining");
 let list = document.getElementById("list");
 let stAmount = "";
 
-function ProductTitle () {
+function ProductTitle() {
   stAmount = totalAmount.value;
   if (stAmount === "" || stAmount < 0) {
-    errorMessage.classList.remove("hide");
+    budgetError.classList.remove("hide");
   } else {
-    errorMessage.classList.add("hide");
+    budgetError.classList.add("hide");
     totalBudget.innerHTML = stAmount;
     Remaining.innerText = stAmount - Expenses.innerText;
     totalAmount.value = "";
@@ -71,8 +71,8 @@ let modifyElement = (element, edit = false) => {
 
 function amountChecker() {
   if (!userAmount.value || !productTitle.value) {
-    productTitleError.classList.remove("hide");
-    return false;
+    productError.classList.remove("hide");
+        return false;
   }
   disableButtons(false);
   let expenditure = parseInt(userAmount.value);
