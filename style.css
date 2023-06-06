@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+}
+.app {
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
+}
+.container {
+  width: 100%;
+}
+.budgetContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.app h3 {
+  color: #ff0000;
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+.container input {
+  display: block;
+  width: 100%;
+  padding: 0.6em 0.3em;
+  border: 1px solid #b1b1b1;
+  border-radius: 0.3em;
+  color: #414a67;
+  outline: none;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+}
+.container input:focus {
+  border-color: #f458da;
+}
+.Budget,
+.Expenses {
+  background-color: #000000;
+  padding: 1.25em 0.9em;
+  border-radius: 0.3em;
+  box-shadow: 0em 0.6em 2em 0em rgba(255, 255, 255, 0.534);
+}
+.table {
+  background-color: #000000;;
+  color: #ffffff;
+  border-radius: 0.3em;
+  box-shadow: 0em 0.6em 2em 0em rgba(255, 255, 255, 0.534);
+  margin: 2em 0;
+  padding: 1.2em;
+}
+.table p {
+  font-weight: 500;
+  margin-bottom: 0.6em;
+  color: #ff0000;
+  font-size: 1.2em;
+}
+.table span {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1em;
+
+}
+.submit {
+  font-size: 1em;
+  margin-top: 0.8em;
+  background-color: #ff0000;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 0.6em 1.2em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.submit:hover{
+  font-weight: bold;
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+.list {
+  background-color: #000000;
+  padding: 1.8em 1.2em;
+  box-shadow: 0em 0.6em 2em 0em rgba(255, 255, 255, 0.534);
+  border-radius: 0.6em;
+  margin-top: 1.8em;
+
+}
+.sublist-content {
+  width: 100%;
+  border-left: 0.3em solid #b1b1b1;
+  margin-bottom: 0.6em;
+  padding: 0.5em 1em;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+}
+.product {
+  font-weight: 500;
+  color: #ffffff;
+}
+.amount {
+  color: #ffffff;
+  margin-left: 20%;
+}
+.icons-container {
+  width: 5em;
+  margin: 1.2em;
+  align-items: center;
+}
+.product-title {
+  margin-bottom: 1em;
+}
+.hide {
+  display: none;
+}
+.error{
+  color: #ffffff;
+}
+
+.edit {
+  margin-left: auto;
+}
+.edit,
+.delete {
+  background: transparent;
+  cursor: pointer;
+  margin-right: 1.5em;
+  border: none;
+  color: #ff0000;
+}
+.edit:hover,
+.delete:hover{
+  font-weight: bold;
+  transition: 0.4s;
+  transform: scale(1.3);
+}
